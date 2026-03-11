@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Lucas Vasconcelos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Lucas Vasconcelos</h1>
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <button id="theme-toggle">🌓 Tema</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="sobre">
+            <h2>Sobre Mim</h2>
+            <div class="sobre-conteudo">
+                <img src="minha-foto.jpg" alt="Foto de Lucas Vasconcelos" class="perfil-foto">
+                
+                <div class="sobre-texto">
+                    <h3>Sou Lucas Vasconcelos Pessoa de Oliveira. Tenho 20 Anos</h3>
+                    <br>
+                    <p>Sou estudante de Análise e Desenvolvimento de Sistemas (Atualmente no 4° semestre com previsão de formatura em 12/2026), desenvolvedor focado em soluções práticas e escaláveis, scripts, sistemas de gerenciamentos e sistemas web completos. Tenho experiência prática unindo tecnologia com eficiência de processos.</p>
+                    <br>
+                    <p>Além da programação, possuo um perfil empreendedor. Gosto de analisar como a tecnologia e o marketing digital podem se integrar para escalar negócios e otimizar rotinas do mundo real, criando soluções e serviços de alta qualidade e com excelente usabilidade para o usuário final.</p>
+                    <br>
+                    
+                    <div style="margin-bottom: 2rem; margin-top: 1rem;">
+                        <a href="curriculo.pdf" download="Curriculo_Lucas_Vasconcelos.pdf" class="btn">
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Baixar Currículo (PDF)
+                        </a>
+                    </div>
+
+                    <h3>Minhas Habilidades</h3>
+                    <div class="skills-container">
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="skill-icon" alt="Java" /> Java</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" class="skill-icon" alt="Spring" /> Spring Boot</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-icon" alt="Python" /> Python</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="skill-icon" alt="JS" /> JavaScript</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React" /> React</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="Postgres" /> PostgreSQL</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon" alt="HTML" /> HTML</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon" alt="CSS" /> CSS</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="skill-icon" alt="C" />C</span>
+                         <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="Docker" />Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h2>Meus Projetos</h2>
+            
+            <div class="filtros-container">
+                <button class="filter-btn active" data-filter="todos">Todos</button>
+                <button class="filter-btn" data-filter="java">Java & Full-Stack</button>
+                <button class="filter-btn" data-filter="python">Python & Automações</button>
+                <button class="filter-btn" data-filter="web">Web Front-End</button>
+            </div>
+
+            <div class="projetos-grid" id="projetos-container"></div>
+        </section>
+
+        <section id="contato">
+            <h2>Contatos e perfis</h2>
+            <p>Entre em contato via E-Mail, WhatsApp ou Instagram!</p>
+            <div class="contato-botoes">
+                <a href="mailto:lucasvscxl@gmail.com" class="btn">
+                    <img src="https://cdn.simpleicons.org/gmail/white" class="btn-icon" alt="E-mail" /> E-mail
+                </a>
+                <a href="https://wa.me/5561999999999" class="btn" target="_blank">
+                    <img src="https://cdn.simpleicons.org/whatsapp/white" class="btn-icon" alt="WhatsApp" /> WhatsApp
+                </a>
+                <a href="https://www.instagram.com/lucasxl.9?igsh=MW52NGNvcThldTJzMg==" class="btn" target="_blank">
+                    <img src="https://cdn.simpleicons.org/instagram/white" class="btn-icon" alt="Instagram" /> Instagram
+                </a>
+                <a href="https://github.com/dev-lucasvsc" class="btn" target="_blank">
+                    <img src="https://cdn.simpleicons.org/github/white" class="btn-icon" alt="GitHub" /> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" class="btn" target="_blank">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    </svg> 
+                    LinkedIn
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Lucas Vasconcelos Pessoa de Oliveira.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
