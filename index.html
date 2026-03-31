@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio - Lucas Vasconcelos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,7 +16,9 @@
                 <li><a href="#projetos">Projetos</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
-            <button id="theme-toggle">🌓 Tema</button>
+            <button id="theme-toggle">
+    <i class="fa-solid fa-lightbulb"></i> Tema
+</button>
         </nav>
     </header>
 
@@ -54,6 +57,8 @@
                         <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="Postgres" /> PostgreSQL</span>
                         <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon" alt="HTML" /> HTML</span>
                         <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon" alt="CSS" /> CSS</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="DOCKER" /> DOCKER</span>
+                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="skill-icon" alt="C" /> C</span>
                     </div>
                 </div>
             </div>
@@ -74,26 +79,68 @@
 
         <section id="contato">
             <h2>Contatos e perfis</h2>
-            <p>Entre em contato via E-Mail, WhatsApp ou Instagram!</p>
-            <div class="contato-botoes">
-                <a href="mailto:lucasvscxl@gmail.com" class="btn">
-                    <img src="https://cdn.simpleicons.org/gmail/white" class="btn-icon" alt="E-mail" /> E-mail
-                </a>
-                <a href="https://wa.me/5561999999999" class="btn" target="_blank">
-                    <img src="https://cdn.simpleicons.org/whatsapp/white" class="btn-icon" alt="WhatsApp" /> WhatsApp
-                </a>
-                <a href="https://www.instagram.com/lucasxl.9?igsh=MW52NGNvcThldTJzMg==" class="btn" target="_blank">
-                    <img src="https://cdn.simpleicons.org/instagram/white" class="btn-icon" alt="Instagram" /> Instagram
-                </a>
-                <a href="https://github.com/dev-lucasvsc" class="btn" target="_blank">
-                    <img src="https://cdn.simpleicons.org/github/white" class="btn-icon" alt="GitHub" /> GitHub
-                </a>
-                <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" class="btn" target="_blank">
-                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                    </svg> 
-                    LinkedIn
-                </a>
+            <p>Conecte-se comigo através das minhas redes profissionais e repositórios!</p>
+            
+            <div id="cards">
+                <div class="card">
+                    <div class="card_content">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h2>Instagram</h2>
+                        <p><span>@lucasxl.9</span></p>
+                        <a href="https://www.instagram.com/lucasxl.9?igsh=MW52NGNvcThldTJzMg==" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Acessar</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_content">
+                        <i class="fa-brands fa-github"></i>
+                        <h2>Github</h2>
+                        <p><span>dev-lucasvsc</span></p>
+                        <a href="https://github.com/dev-lucasvsc" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Acessar</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_content">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <h2>Linkedin</h2>
+                        <p><span>dev-lucas-vasconcelos</span></p>
+                        <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Conectar</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_content">
+                        <i class="fa-solid fa-envelope"></i>
+                        <h2>E-mail</h2>
+                        <p><span>lucasvscxl@gmail.com</span></p>
+                        <a href="mailto:lucasvscxl@gmail.com">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Enviar E-mail</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card_content">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h2>WhatsApp</h2>
+                        <p><span>(61) 9 9123-2571</span></p>
+                        <a href="https://wa.me/5561991232571" target="_blank">
+                            <i class="fa-solid fa-link"></i>
+                            <span>Enviar Mensagem</span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

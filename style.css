@@ -1,18 +1,22 @@
 :root {
-    --bg-color: #f4f4f9;
+    --bg-color: #f9f9fb; /* Fundo mais claro e limpo para o modo claro */
     --text-color: #333333;
     --primary-color: #0056b3;
     --secondary-color: #e0e0e0;
-    --card-bg: #ffffff;
+    --card-bg: rgba(255, 255, 255, 0.4); /* Fundo dos cartões em modo claro: Vidro transparente */
     --transition: 0.3s ease;
+    --border-color: rgba(0, 0, 0, 0.08); /* Borda muito fina */
+    --glass-shimmer: rgba(255, 255, 255, 0.2);
 }
 
 [data-theme="dark"] {
-    --bg-color: #121212;
+    --bg-color: #1a1a1c; /* Fundo escuro profundo para o modo escuro */
     --text-color: #f4f4f9;
     --primary-color: #4da3ff;
     --secondary-color: #2a2a2a;
-    --card-bg: #1e1e1e;
+    --card-bg: rgba(0, 0, 0, 0.5); /* Fundo dos cartões em modo escuro: Vidro escuro transparente */
+    --border-color: rgba(255, 255, 255, 0.08);
+    --glass-shimmer: rgba(255, 255, 255, 0.1);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
@@ -28,7 +32,38 @@ nav { display: flex; justify-content: space-between; align-items: center; flex-w
 nav ul { list-style: none; display: flex; gap: 1.5rem; }
 nav a { text-decoration: none; color: var(--text-color); font-weight: bold; transition: color var(--transition); }
 nav a:hover { color: var(--primary-color); }
-button { cursor: pointer; padding: 0.5rem 1rem; border: none; border-radius: 5px; background: var(--primary-color); color: #fff; font-weight: bold; }
+
+/* --- Botão de Tema Especial (Vidro Líquido) --- */
+#theme-toggle { 
+    cursor: pointer; 
+    padding: 0.5rem 1rem; 
+    border: 1px solid var(--border-color); 
+    border-radius: 20px; 
+    background: var(--card-bg); /* Vidro transparente */
+    backdrop-filter: blur(10px); /* Efeito de desfoque */
+    -webkit-backdrop-filter: blur(10px);
+    color: var(--text-color); 
+    font-weight: bold; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.2s ease, background 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.6); /* Mais claro no hover modo claro */
+}
+
+[data-theme="dark"] #theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.7); /* Mais escuro no hover modo escuro */
+}
+
+/* Ícones de luz/lua dentro do botão */
+#theme-toggle i {
+    font-size: 1.1rem;
+}
 
 main { padding: 3rem 5%; }
 section { margin-bottom: 4rem; }
@@ -89,14 +124,7 @@ h2 { margin-bottom: 1.5rem; color: var(--primary-color); }
     height: 14px;
 }
 
-/* Botões e Ícones de Contato */
-.contato-botoes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
+/* --- Estilos do Botão de Download do Currículo --- */
 .btn { 
     display: inline-flex; 
     align-items: center;
@@ -150,3 +178,137 @@ footer { text-align: center; padding: 1.5rem; background: var(--secondary-color)
 /* Animação de Entrada  */
 .fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Efeito de Vidro Líquido - Cards de Redes Sociais e Contactos --- */
+#cards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+#cards .card {
+    min-width: 200px;
+    height: 300px;
+    flex: 1 1 200px;
+    background-color: var(--card-bg); /* Vidro transparente respeitando o tema */
+    border: 1px solid var(--border-color); /* Borda fina */
+    border-radius: 12px;
+    position: relative;
+    padding: 0;
+    overflow: hidden; /* Para o brilho não sair */
+    backdrop-filter: blur(5px); /* Efeito de desfoque sutil no conteúdo */
+    -webkit-backdrop-filter: blur(5px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+/* Efeito de brilho de vidro (shimmer) */
+#cards .card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 40%,
+        var(--glass-shimmer) 50%,
+        rgba(255, 255, 255, 0) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: rotate(45deg);
+    transition: transform 0.6s ease;
+    z-index: 1;
+}
+
+#cards .card:hover::after {
+    transform: rotate(45deg) translate(50%, 50%);
+}
+
+#cards:hover > .card {
+    /* REMOVIDO: background radial-gradient colorido */
+    background: var(--card-bg); /* Mantém o fundo base do vidro */
+    border-color: hsl(var(--color) / 0.8); /* Borda colorida mais intensa no hover */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transform: translateY(-5px); /* Pequena elevação no hover */
+}
+
+#cards .card_content {
+    position: absolute;
+    inset: 1px;
+    background-color: transparent; /* Conteúdo transparente para mostrar o vidro de fundo */
+    border-radius: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    z-index: 2; /* Acima do shimmer */
+}
+
+/* Cores de destaque para cada card */
+#cards .card:nth-child(1) { --color: 348 80% 60%; } /* Instagram */
+#cards .card:nth-child(2) { --color: 0 0% 100%; }   /* Github */
+#cards .card:nth-child(3) { --color: 220 100% 35%; } /* Linkedin */
+#cards .card:nth-child(4) { --color: 0 70% 50%; }   /* E-mail */
+#cards .card:nth-child(5) { --color: 142 70% 45%; } /* WhatsApp */
+
+/* Efeito de 'Luz Apagada' no Modo Escuro */
+[data-theme="dark"] #cards .card {
+    filter: brightness(0.8) grayscale(0.2); /* Escurece e remove saturação */
+}
+
+[data-theme="dark"] #cards:hover > .card {
+    filter: brightness(1) grayscale(0); /* Acende no hover */
+}
+
+#cards .card_content > i {
+    font-size: 3.5rem;
+    color: var(--text-color); /* Segue a cor do texto do tema */
+    opacity: 0.6;
+}
+
+#cards .card_content > h2 {
+    color: var(--text-color);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#cards .card_content > p {
+    color: var(--text-color);
+    opacity: 0.7;
+    font-size: 0.9rem;
+}
+
+#cards .card_content > p span {
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+#cards .card_content > a {
+    all: unset;
+    cursor: pointer;
+    width: 75%;
+    padding-block: 0.6rem;
+    background-color: rgba(255, 255, 255, 0.1); /* Vidro sutil */
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    z-index: 10;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: all 0.3s;
+}
+
+#cards .card_content > a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid var(--primary-color);
+}

@@ -1,13 +1,32 @@
+// --- Lógica de Alternância de Tema com Ícones e Memória ---
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+const themeIcon = themeToggle.querySelector('i');
+
+// Função para definir o tema e salvar no localStorage
+function setTheme(theme) {
+    if (theme === 'dark') {
+        body.setAttribute('data-theme', 'dark');
+        themeIcon.classList.remove('fa-lightbulb');
+        themeIcon.classList.add('fa-moon');
+    } else {
+        body.removeAttribute('data-theme');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-lightbulb');
+    }
+    localStorage.setItem('portfolio-theme', theme);
+}
+
+// Carregar o tema salvo ou o padrão (claro) ao iniciar
+const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+setTheme(savedTheme);
 
 themeToggle.addEventListener('click', () => {
-    if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-    } else {
-        body.setAttribute('data-theme', 'dark');
-    }
+    const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    setTheme(newTheme);
 });
+
 
 // Dicionário mapeando os nomes para os links dos ícones
 const iconesTech = {
@@ -124,3 +143,20 @@ function aplicarAnimacaoScroll() {
 }
 
 renderProjetos();
+
+// Lógica de Efeito Glow para os Cards de Contato
+const glowCardsArray = Array.from(document.querySelectorAll("#cards .card"));
+const cardsContainerGlow = document.querySelector("#cards");
+
+if (cardsContainerGlow) {
+    cardsContainerGlow.addEventListener("mousemove", (e) => {
+        for(const card of glowCardsArray){
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+        }
+    });
+}
