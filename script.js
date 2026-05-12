@@ -116,7 +116,7 @@ function renderProjetos(filtro = 'todos') {
     grid.innerHTML = lista.map(p => `
         <article class="proj-card reveal">
             <div class="proj-top">
-                <div class="proj-icon">${p.emoji}</div>
+                <div class="proj-icon"><i class="fa-solid fa-code"></i></div>
                 ${p.destaque ? '<span class="proj-badge">destaque</span>' : ''}
             </div>
             <h3>${p.nome}</h3>
