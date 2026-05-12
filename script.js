@@ -1,162 +1,178 @@
-// --- Lógica de Alternância de Tema com Ícones e Memória ---
-const themeToggle = document.getElementById('theme-toggle');
+// ===========================
+// TEMA
+// ===========================
+const toggle = document.getElementById('theme-toggle');
 const body = document.body;
-const themeIcon = themeToggle.querySelector('i');
 
-// Função para definir o tema e salvar no localStorage
-function setTheme(theme) {
-    if (theme === 'dark') {
-        body.setAttribute('data-theme', 'dark');
-        themeIcon.classList.remove('fa-lightbulb');
-        themeIcon.classList.add('fa-moon');
-    } else {
-        body.removeAttribute('data-theme');
-        themeIcon.classList.remove('fa-moon');
-        themeIcon.classList.add('fa-lightbulb');
-    }
-    localStorage.setItem('portfolio-theme', theme);
-}
+const savedTheme = localStorage.getItem('lv-theme') || 'light';
+body.setAttribute('data-theme', savedTheme);
 
-// Carregar o tema salvo ou o padrão (claro) ao iniciar
-const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
-setTheme(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
+toggle.addEventListener('click', () => {
+    const current = body.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    body.setAttribute('data-theme', next);
+    localStorage.setItem('lv-theme', next);
 });
 
 
-// Dicionário mapeando os nomes para os links dos ícones
-const iconesTech = {
-    "java": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
-    "spring boot": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
-    "react": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
-    "postgresql": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg",
-    "python": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
-    "html": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg",
-    "css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg",
-    "javascript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg",
-    "typescript": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg",
-    "tailwind css": "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+// ===========================
+// DADOS — PROJETOS
+// ===========================
+const ICONS = {
+    'Java':         'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg',
+    'Spring Boot':  'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
+    'Python':       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg',
+    'React':        'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg',
+    'TypeScript':   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg',
+    'PostgreSQL':   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg',
+    'JavaScript':   'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
+    'SQLite':       'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
+    'Tailwind CSS': 'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
 };
 
 const projetos = [
     {
-        nome: "Sistema de Gestão Hospitalar",
-        descricao: "Sistema full-stack completo para gerenciamento de rotinas hospitalares e dados.",
-        tecnologias: ["Java", "Spring Boot", "React", "PostgreSQL"],
-        link: "https://github.com/dev-lucasvsc/hospital-management-system.git"
+        nome: 'Sexta-Feira',
+        emoji: '🤖',
+        desc: 'Assistente virtual desktop com wake word offline, LLM dual (Claude + Ollama), visão computacional, controle do SO e interface holográfica via WebSocket.',
+        tags: ['Python', 'SQLite'],
+        extras: ['LLM', 'Ollama', 'Vosk', 'WebSocket'],
+        link: 'https://github.com/dev-lucasvsc/Sexta-Feira',
+        filtros: ['python'],
+        destaque: true
     },
     {
-        nome: "Automação Fiscal",
-        descricao: "Script desenvolvido para automatizar a entrada de dados e classificação de notas fiscais.",
-        tecnologias: ["Python"],
-        link: "https://github.com/dev-lucasvsc/Automa-o-Objtetiva.git"
+        nome: 'Hospital Management System',
+        emoji: '🏥',
+        desc: 'Sistema hospitalar completo com Spring Boot, JWT, WebSocket e arquitetura em camadas — agendamento de consultas, gestão de funcionários e logs de auditoria.',
+        tags: ['Java', 'Spring Boot', 'PostgreSQL'],
+        extras: ['JWT', 'WebSocket', 'REST API'],
+        link: 'https://github.com/dev-lucasvsc/hospital-management-system',
+        filtros: ['java'],
+        destaque: true
     },
     {
-        nome: "Quebrador de Senhas MD5",
-        descricao: "Script de força bruta otimizado para fins acadêmicos utilizando multithreading.",
-        tecnologias: ["Python", "Multithreading"],
-        link: "https://github.com/dev-lucasvsc/Teste-eficiencia-threads.git"
+        nome: 'StreamApp',
+        emoji: '📺',
+        desc: 'Plataforma de streaming full-stack. Backend em Java com POO avançada e servidor HTTP nativo. Frontend em React + TypeScript + Tailwind.',
+        tags: ['Java', 'React', 'TypeScript', 'Tailwind CSS'],
+        extras: [],
+        link: 'https://github.com/dev-lucasvsc/StreamApp',
+        filtros: ['java'],
+        destaque: false
     },
     {
-        nome: "StreamApp",
-        descricao: "Plataforma full-stack que simula um serviço de streaming, integrando conceitos avançados de POO no backend e uma interface moderna.",
-        tecnologias: ["Java", "React", "TypeScript", "Tailwind CSS"],
-        link: "https://github.com/dev-lucasvsc/StreamApp.git"
+        nome: 'RPA Fiscal — Objetiva Atacadista',
+        emoji: '⚙️',
+        desc: 'Solução de RPA para automatizar processos fiscais corporativos. Interface gráfica com tkinter e banco de dados local para rastreamento das execuções.',
+        tags: ['Python', 'SQLite'],
+        extras: ['pyautogui', 'tkinter', 'RPA'],
+        link: 'https://github.com/dev-lucasvsc/Automacao-Objtetiva',
+        filtros: ['python', 'automacao'],
+        destaque: false
     },
     {
-        nome: "Layout de Portal de Notícias",
-        descricao: "Construção da interface de um portal de notícias utilizando estritamente tabelas.",
-        tecnologias: ["HTML"],
-        link: "https://github.com/dev-lucasvsc/Noticia-PWEB.git"
-    }
+        nome: 'Benchmark de Paralelismo',
+        emoji: '⚡',
+        desc: 'Processamento paralelo de imagem PPM de 16 GB com multiprocessing Python. Análise completa de speedup e eficiência por número de processos.',
+        tags: ['Python'],
+        extras: ['multiprocessing', 'benchmark'],
+        link: 'https://github.com/dev-lucasvsc/unieuro-concorrente-202601-atividade4',
+        filtros: ['python', 'automacao'],
+        destaque: false
+    },
+    {
+        nome: 'Nextime',
+        emoji: '📅',
+        desc: 'App mobile de agendamento com dois perfis (cliente e prestador), chat integrado, dashboard financeiro e ciclo completo de agendamento de serviços.',
+        tags: ['JavaScript'],
+        extras: ['Cordova', 'Mobile', 'CSS'],
+        link: 'https://github.com/dev-lucasvsc/nextime-mobile',
+        filtros: ['mobile'],
+        destaque: false
+    },
 ];
 
-const container = document.getElementById('projetos-container');
 
-function renderProjetos(filtro = "todos") {
-    container.innerHTML = ""; 
+// ===========================
+// RENDER PROJETOS
+// ===========================
+const grid = document.getElementById('proj-grid');
 
-    const projetosFiltrados = projetos.filter(projeto => {
-        if (filtro === "todos") return true;
-        const techs = projeto.tecnologias.map(t => t.toLowerCase());
-        if (filtro === "java") return techs.includes("java");
-        if (filtro === "python") return techs.includes("python");
-        if (filtro === "web") return techs.includes("react") || techs.includes("html");
-        return true;
-    });
-
-    projetosFiltrados.forEach(projeto => {
-        const card = document.createElement('div');
-        card.className = 'card fade-in';
-        
-        // Mapeando a tecnologia para incluir a imagem, se ela existir no dicionário
-        const tagsHTML = projeto.tecnologias.map(tech => {
-            const techKey = tech.toLowerCase();
-            const urlIcone = iconesTech[techKey];
-            
-            if (urlIcone) {
-                return `<span class="tech-tag"><img src="${urlIcone}" class="tag-icon" alt="Ícone ${tech}" /> ${tech}</span>`;
-            } else {
-                return `<span class="tech-tag">${tech}</span>`; // Caso não tenha ícone (ex: Multithreading)
-            }
-        }).join('');
-
-        card.innerHTML = `
-            <h3>${projeto.nome}</h3>
-            <p>${projeto.descricao}</p>
-            <div class="tags">${tagsHTML}</div>
-            <br>
-            <a href="${projeto.link}" target="_blank" style="color: var(--primary-color); font-weight: bold; text-decoration: none;">Ver Repositório</a>
-        `;
-        
-        container.appendChild(card);
-    });
-
-    aplicarAnimacaoScroll();
+function tagHTML(nome) {
+    const icon = ICONS[nome];
+    return `<span class="proj-tag">${icon ? `<img src="${icon}" alt="${nome}">` : ''} ${nome}</span>`;
 }
 
-const filterBtns = document.querySelectorAll('.filter-btn');
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        const filtro = e.target.getAttribute('data-filter');
-        renderProjetos(filtro);
+function extraTagHTML(nome) {
+    return `<span class="proj-tag">${nome}</span>`;
+}
+
+function renderProjetos(filtro = 'todos') {
+    const lista = filtro === 'todos'
+        ? projetos
+        : projetos.filter(p => p.filtros.includes(filtro));
+
+    grid.innerHTML = lista.map(p => `
+        <article class="proj-card reveal">
+            <div class="proj-top">
+                <div class="proj-icon">${p.emoji}</div>
+                ${p.destaque ? '<span class="proj-badge">destaque</span>' : ''}
+            </div>
+            <h3>${p.nome}</h3>
+            <p>${p.desc}</p>
+            <div class="proj-tags">
+                ${p.tags.map(tagHTML).join('')}
+                ${p.extras.map(extraTagHTML).join('')}
+            </div>
+            <a href="${p.link}" target="_blank" class="proj-link">
+                ver repositório <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </article>
+    `).join('');
+
+    observeReveal();
+}
+
+
+// ===========================
+// FILTROS
+// ===========================
+document.querySelectorAll('.f').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.f').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderProjetos(btn.dataset.f);
     });
 });
 
-function aplicarAnimacaoScroll() {
+
+// ===========================
+// SCROLL REVEAL
+// ===========================
+function observeReveal() {
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, i) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, i * 60);
+                observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.08 });
 
-    const cards = document.querySelectorAll('.fade-in');
-    cards.forEach(card => observer.observe(card));
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 }
 
+
+// ===========================
+// INIT
+// ===========================
 renderProjetos();
 
-// Lógica de Efeito Glow para os Cards de Contato
-const glowCardsArray = Array.from(document.querySelectorAll("#cards .card"));
-const cardsContainerGlow = document.querySelector("#cards");
-
-if (cardsContainerGlow) {
-    cardsContainerGlow.addEventListener("mousemove", (e) => {
-        for(const card of glowCardsArray){
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            card.style.setProperty("--mouse-x", `${x}px`);
-            card.style.setProperty("--mouse-y", `${y}px`);
-        }
-    });
-}
+// Sections reveal
+document.querySelectorAll('section, footer').forEach(el => {
+    el.classList.add('reveal');
+    observeReveal();
+});

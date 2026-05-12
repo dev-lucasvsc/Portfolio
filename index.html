@@ -3,152 +3,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Lucas Vasconcelos</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Lucas Vasconcelos — Dev</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Lucas Vasconcelos</h1>
-            <ul>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-            <button id="theme-toggle">
-    <i class="fa-solid fa-lightbulb"></i> Tema
-</button>
-        </nav>
-    </header>
 
-    <main>
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <div class="sobre-conteudo">
-                <img src="minha-foto.jpg" alt="Foto de Lucas Vasconcelos" class="perfil-foto">
-                
-                <div class="sobre-texto">
-                    <h3>Sou Lucas Vasconcelos Pessoa de Oliveira. Tenho 20 Anos</h3>
-                    <br>
-                    <p>Sou estudante de Análise e Desenvolvimento de Sistemas (Atualmente no 4° semestre com previsão de formatura em 12/2026), desenvolvedor focado em soluções práticas e escaláveis, scripts, sistemas de gerenciamentos e sistemas web completos. Tenho experiência prática unindo tecnologia com eficiência de processos.</p>
-                    <br>
-                    <p>Desenvolvedor Full Stack com 20 anos, focado em backend, automação de processos e construção de sistemas escaláveis. Tenho base sólida em lógica de programação, estruturas de dados e programação orientada a objetos, aplicadas em projetos acadêmicos e profissionais reais. Trabalho com Java (Spring Boot), Python (Django), React e PostgreSQL, e aplico metodologias ágeis no desenvolvimento de sistemas com arquitetura limpa e APIs RESTful. Tenho experiência prática com RPA (Robotic Process Automation) aplicado ao ambiente fiscal corporativo, e desenvolvo projetos que vão de sistemas hospitalares completos a assistentes virtuais com IA local. Atualmente estagiando na Fábrica de Software da Unieuro como desenvolvedor backend e banco de dados, consolidando conhecimentos em engenharia de software, engenharia de requisitos e computação paralela e distribuída.</p>
-                    <br>
-                    
-                    <div style="margin-bottom: 2rem; margin-top: 1rem;">
-                        <a href="curriculo.pdf" download="Curriculo_Lucas_Vasconcelos.pdf" class="btn">
-                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            Baixar Currículo (PDF)
-                        </a>
-                    </div>
+<!-- NAV -->
+<nav>
+    <span class="nav-name mono">LV</span>
+    <ul>
+        <li><a href="#sobre">sobre</a></li>
+        <li><a href="#projetos">projetos</a></li>
+        <li><a href="#contato">contato</a></li>
+    </ul>
+    <button id="theme-toggle" aria-label="Alternar tema">
+        <i class="fa-solid fa-circle-half-stroke"></i>
+    </button>
+</nav>
 
-                    <h3>Minhas Habilidades</h3>
-                    <div class="skills-container">
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" class="skill-icon" alt="Java" /> Java</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" class="skill-icon" alt="Spring" /> Spring Boot</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="skill-icon" alt="Python" /> Python</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" class="skill-icon" alt="JS" /> JavaScript</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" class="skill-icon" alt="React" /> React</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="skill-icon" alt="Postgres" /> PostgreSQL</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" class="skill-icon" alt="HTML" /> HTML</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" class="skill-icon" alt="CSS" /> CSS</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" class="skill-icon" alt="DOCKER" /> DOCKER</span>
-                        <span class="skill-badge"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" class="skill-icon" alt="C" /> C</span>
-                    </div>
+<!-- HERO -->
+<section id="hero">
+    <div class="hero-left">
+        <p class="hero-eyebrow mono">— Águas Lindas · GO</p>
+        <h1>Lucas<br><em>Vasconcelos</em></h1>
+        <p class="hero-role mono">Full Stack · Backend · Automação</p>
+    </div>
+
+    <div class="hero-center">
+        <div class="foto-wrap">
+            <img src="minha-foto.png" alt="Lucas Vasconcelos" class="foto">
+            <div class="foto-badge mono">20 anos</div>
+        </div>
+    </div>
+
+    <div class="hero-right">
+        <p class="hero-desc">Construo sistemas que escalam, automatizo o que deveria ser automático e escrevo código que dura.</p>
+        <div class="hero-links">
+            <a href="https://github.com/dev-lucasvsc" target="_blank" class="link-pill"><i class="fa-brands fa-github"></i> GitHub</a>
+            <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" class="link-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            <a href="curriculo.pdf" download class="link-pill accent"><i class="fa-solid fa-file-arrow-down"></i> Currículo</a>
+        </div>
+        <div class="hero-stack">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" title="Spring Boot">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
+        </div>
+    </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+    <div class="marquee">
+        <span>Java</span><span class="dot">·</span>
+        <span>Spring Boot</span><span class="dot">·</span>
+        <span>Python</span><span class="dot">·</span>
+        <span>React</span><span class="dot">·</span>
+        <span>TypeScript</span><span class="dot">·</span>
+        <span>PostgreSQL</span><span class="dot">·</span>
+        <span>RPA</span><span class="dot">·</span>
+        <span>LLM</span><span class="dot">·</span>
+        <span>WebSocket</span><span class="dot">·</span>
+        <span>JWT</span><span class="dot">·</span>
+        <span>REST API</span><span class="dot">·</span>
+        <span>Java</span><span class="dot">·</span>
+        <span>Spring Boot</span><span class="dot">·</span>
+        <span>Python</span><span class="dot">·</span>
+        <span>React</span><span class="dot">·</span>
+        <span>TypeScript</span><span class="dot">·</span>
+        <span>PostgreSQL</span><span class="dot">·</span>
+        <span>RPA</span><span class="dot">·</span>
+        <span>LLM</span><span class="dot">·</span>
+        <span>WebSocket</span><span class="dot">·</span>
+    </div>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <div class="section-header">
+        <span class="num mono">01</span>
+        <h2>Sobre</h2>
+    </div>
+    <div class="sobre-grid">
+        <div class="sobre-bio">
+            <p>Desenvolvedor Full Stack com <strong>20 anos</strong>, cursando Análise e Desenvolvimento de Sistemas na Unieuro (previsão 12/2026). Estagiando na <strong>Fábrica de Software da Unieuro</strong> como dev backend e banco de dados.</p>
+            <br>
+            <p>Trabalho com Java, Spring Boot, Python, React e PostgreSQL. Tenho experiência real com <strong>RPA em ambiente fiscal corporativo</strong> e desenvolvo projetos que vão de sistemas hospitalares a assistentes virtuais com IA local.</p>
+        </div>
+        <div class="skills-list">
+            <div class="skill-group">
+                <span class="skill-label mono">Backend</span>
+                <div class="skill-items">
+                    <span>Java</span><span>Spring Boot</span><span>Python</span><span>REST API</span><span>JWT</span>
                 </div>
             </div>
-        </section>
-
-        <section id="projetos">
-            <h2>Meus Projetos</h2>
-            
-            <div class="filtros-container">
-                <button class="filter-btn active" data-filter="todos">Todos</button>
-                <button class="filter-btn" data-filter="java">Java & Full-Stack</button>
-                <button class="filter-btn" data-filter="python">Python & Automações</button>
-                <button class="filter-btn" data-filter="web">Web Front-End</button>
-            </div>
-
-            <div class="projetos-grid" id="projetos-container"></div>
-        </section>
-
-        <section id="contato">
-            <h2>Contatos e perfis</h2>
-            <p>Conecte-se comigo através das minhas redes profissionais e repositórios!</p>
-            
-            <div id="cards">
-                <div class="card">
-                    <div class="card_content">
-                        <i class="fa-brands fa-instagram"></i>
-                        <h2>Instagram</h2>
-                        <p><span>@lucasxl.9</span></p>
-                        <a href="https://www.instagram.com/lucasxl.9?igsh=MW52NGNvcThldTJzMg==" target="_blank">
-                            <i class="fa-solid fa-link"></i>
-                            <span>Acessar</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_content">
-                        <i class="fa-brands fa-github"></i>
-                        <h2>Github</h2>
-                        <p><span>dev-lucasvsc</span></p>
-                        <a href="https://github.com/dev-lucasvsc" target="_blank">
-                            <i class="fa-solid fa-link"></i>
-                            <span>Acessar</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_content">
-                        <i class="fa-brands fa-linkedin"></i>
-                        <h2>Linkedin</h2>
-                        <p><span>dev-lucas-vasconcelos</span></p>
-                        <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank">
-                            <i class="fa-solid fa-link"></i>
-                            <span>Conectar</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_content">
-                        <i class="fa-solid fa-envelope"></i>
-                        <h2>E-mail</h2>
-                        <p><span>lucasvscxl@gmail.com</span></p>
-                        <a href="mailto:lucasvscxl@gmail.com">
-                            <i class="fa-solid fa-link"></i>
-                            <span>Enviar E-mail</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card_content">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <h2>WhatsApp</h2>
-                        <p><span>(61) 9 9123-2571</span></p>
-                        <a href="https://wa.me/5561991232571" target="_blank">
-                            <i class="fa-solid fa-link"></i>
-                            <span>Enviar Mensagem</span>
-                        </a>
-                    </div>
+            <div class="skill-group">
+                <span class="skill-label mono">Frontend</span>
+                <div class="skill-items">
+                    <span>React</span><span>TypeScript</span><span>JavaScript</span><span>Tailwind</span>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="skill-group">
+                <span class="skill-label mono">Dados & Infra</span>
+                <div class="skill-items">
+                    <span>PostgreSQL</span><span>SQLite</span><span>Git</span><span>WebSocket</span>
+                </div>
+            </div>
+            <div class="skill-group">
+                <span class="skill-label mono">Automação & IA</span>
+                <div class="skill-items">
+                    <span>RPA</span><span>LLM</span><span>Ollama</span><span>pyautogui</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    <footer>
-        <p>&copy; 2026 Lucas Vasconcelos Pessoa de Oliveira.</p>
-    </footer>
+<!-- PROJETOS -->
+<section id="projetos">
+    <div class="section-header">
+        <span class="num mono">02</span>
+        <h2>Projetos</h2>
+        <div class="filtros">
+            <button class="f active" data-f="todos">todos</button>
+            <button class="f" data-f="java">java</button>
+            <button class="f" data-f="python">python</button>
+            <button class="f" data-f="automacao">automação</button>
+            <button class="f" data-f="mobile">mobile</button>
+        </div>
+    </div>
+    <div id="proj-grid"></div>
+</section>
 
-    <script src="script.js"></script>
+<!-- CONTATO -->
+<section id="contato">
+    <div class="section-header">
+        <span class="num mono">03</span>
+        <h2>Contato</h2>
+    </div>
+    <p class="contato-sub">Disponível para oportunidades — bora conversar.</p>
+    <div class="contato-grid">
+        <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" class="contato-card">
+            <i class="fa-brands fa-linkedin"></i>
+            <div class="contato-info">
+                <strong>LinkedIn</strong>
+                <span>dev-lucas-vasconcelos</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+        <a href="https://github.com/dev-lucasvsc" target="_blank" class="contato-card">
+            <i class="fa-brands fa-github"></i>
+            <div class="contato-info">
+                <strong>GitHub</strong>
+                <span>dev-lucasvsc</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+        <a href="mailto:lucasvscxl@gmail.com" class="contato-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div class="contato-info">
+                <strong>E-mail</strong>
+                <span>lucasvscxl@gmail.com</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+        <a href="https://wa.me/5561991232571" target="_blank" class="contato-card">
+            <i class="fa-brands fa-whatsapp"></i>
+            <div class="contato-info">
+                <strong>WhatsApp</strong>
+                <span>(61) 9 9123-2571</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+        <a href="https://www.instagram.com/lucasxl.9" target="_blank" class="contato-card">
+            <i class="fa-brands fa-instagram"></i>
+            <div class="contato-info">
+                <strong>Instagram</strong>
+                <span>@lucasxl.9</span>
+            </div>
+            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
+        </a>
+    </div>
+</section>
+
+<footer>
+    <span class="mono">Lucas Vasconcelos · 2026</span>
+    <span class="mono muted">feito com café ☕</span>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
