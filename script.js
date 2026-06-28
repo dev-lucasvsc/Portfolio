@@ -71,10 +71,27 @@ const PROJECT_ICONS = {
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="9 7 17 12 9 17 9 7"/>
         </svg>
+    `,
+
+    unitinder: `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 21C12 21 4 14.5 4 9a8 8 0 0 1 16 0c0 5.5-8 12-8 12z"/>
+            <path d="M9 9h6M12 7v4"/>
+        </svg>
     `
 };
 
 const projetos = [
+    {
+        nome: 'UniTinder',
+        icon: PROJECT_ICONS.unitinder,
+        desc: 'Plataforma de matching entre estagiários e empresas. Backend Node.js + Express + Prisma ORM com JWT e controle de acesso por cargo. Frontend em React + TypeScript com validação de CPF/CNPJ e integração REST.',
+        tags: ['TypeScript', 'React', 'PostgreSQL'],
+        extras: ['Node.js', 'Prisma', 'JWT', 'REST API'],
+        link: 'https://github.com/ProcessAI/unieuro-unitinder-202601',
+        filtros: ['todos'],
+        destaque: true
+    },
     {
         nome: 'Sexta-Feira',
         icon: PROJECT_ICONS.sexta,
@@ -116,12 +133,12 @@ const projetos = [
         destaque: false
     },
     {
-        nome: 'Benchmark de Paralelismo',
+        nome: 'Análise Fiscal Distribuída',
         icon: PROJECT_ICONS.benchmark,
-        desc: 'Processamento paralelo de imagem PPM de 16 GB com multiprocessing Python. Análise completa de speedup e eficiência por número de processos.',
+        desc: 'Pipeline paralelo que processa 16 milhões de notas fiscais (1,9 GB CSV) com multiprocessing Python. Benchmarks reais de speedup e eficiência, com análise completa de ICMS, rankings por produto/estado e relatório HTML gerado automaticamente.',
         tags: ['Python'],
-        extras: ['multiprocessing', 'benchmark'],
-        link: 'https://github.com/dev-lucasvsc/unieuro-concorrente-202601-atividade4',
+        extras: ['multiprocessing', 'Decimal', 'heapq', 'benchmark'],
+        link: 'https://github.com/dev-lucasvsc/Distribuido-Doc_fiscall',
         filtros: ['python', 'automacao'],
         destaque: false
     },
