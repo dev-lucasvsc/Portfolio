@@ -1,209 +1,210 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Vasconcelos — Dev</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,700;1,9..144,300;1,9..144,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucas Vasconcelos — Desenvolvedor Backend</title>
+<meta name="description" content="Lucas Vasconcelos — desenvolvedor backend e automação em Brasília. Sistemas em produção, RPA e integração com IA.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-    <span class="nav-name mono">Lucas Vasconcelos</span>
-    <ul>
-        <li><a href="#sobre">sobre</a></li>
-        <li><a href="#projetos">projetos</a></li>
-        <li><a href="#contato">contato</a></li>
-    </ul>
-    <button id="theme-toggle" aria-label="Alternar tema">
-        <i class="fa-solid fa-circle-half-stroke"></i>
-    </button>
-</nav>
+<div class="scanline" aria-hidden="true"></div>
+
+<!-- BARRA SUPERIOR -->
+<header class="topbar">
+  <div class="topbar-left">
+    <span class="prompt mono">lucas<span class="dim">@</span>brasilia<span class="dim">:~$</span></span>
+  </div>
+  <nav class="topbar-nav mono">
+    <a href="#sobre">sobre</a>
+    <a href="#experiencia">experiência</a>
+    <a href="#projetos">projetos</a>
+    <a href="#contato">contato</a>
+  </nav>
+  <div class="topbar-right">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span class="mono status-text">disponível</span>
+    <button id="theme-toggle" class="mono theme-btn" aria-label="Alternar tema">modo claro</button>
+  </div>
+</header>
+
+<main>
 
 <!-- HERO -->
-<section id="hero">
-    <div class="hero-left">
-        <p class="hero-eyebrow mono">—Aguas Lindas - GO</p>
-        <h1>Lucas<br><em>Vasconcelos</em></h1>
-        <p class="hero-role mono">Backend · Automação · IA</p>
+<section class="hero">
+  <div class="hero-copy">
+    <p class="hero-kicker mono">desenvolvedor backend &amp; automação</p>
+    <h1>Lucas<br>Vasconcelos</h1>
+    <p class="hero-lede">Construo o que fica rodando depois que a reunião acaba: back-ends de verdade, automações que substituem trabalho manual e sistemas em uso por clientes reais — não só protótipos de portfólio.</p>
+    <div class="hero-actions">
+      <a href="#projetos" class="btn btn-primary">Ver projetos</a>
+      <a href="curriculo.pdf" download class="btn btn-ghost">Baixar currículo</a>
     </div>
+    <div class="hero-links mono">
+      <a href="https://github.com/dev-lucasvsc" target="_blank" rel="noopener">github.com/dev-lucasvsc</a>
+      <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" rel="noopener">linkedin/dev-lucas-vasconcelos</a>
+    </div>
+  </div>
 
-    <div class="hero-center">
-        <div class="foto-wrap">
-            <img src="minha-foto.jpeg" alt="Lucas Vasconcelos" class="foto">
-            <div class="foto-badge mono">20 anos</div>
-        </div>
+  <div class="hero-side">
+    <div class="id-card">
+      <div class="id-frame">
+        <img src="minha-foto.jpeg" alt="Foto de Lucas Vasconcelos">
+        <span class="corner tl"></span><span class="corner tr"></span>
+        <span class="corner bl"></span><span class="corner br"></span>
+      </div>
     </div>
-
-    <div class="hero-right">
-        <p class="hero-desc">Construo sistemas que escalam, automatizo o que deveria ser automático e escrevo código que dura.</p>
-        <div class="hero-links">
-            <a href="https://github.com/dev-lucasvsc" target="_blank" class="link-pill"><i class="fa-brands fa-github"></i> GitHub</a>
-            <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" class="link-pill"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-            <a href="curriculo.pdf" download class="link-pill accent"><i class="fa-solid fa-file-arrow-down"></i> Currículo</a>
-        </div>
-        <div class="hero-stack">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="Java" title="Java">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="Spring Boot" title="Spring Boot">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="Python" title="Python">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" title="Node.js">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" title="React">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="TypeScript" title="TypeScript">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" title="PostgreSQL">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="Docker" title="Docker">
-        </div>
+    <div class="status-panel mono">
+      <div class="status-row"><span>local</span><span>Brasília, DF</span></div>
+      <div class="status-row"><span>formação</span><span>ADS · Unieuro · dez/2026</span></div>
+      <div class="status-row"><span>função atual</span><span>estagiário backend, Fábrica de Software</span></div>
+      <div class="status-row"><span>foco</span><span>backend, automação, integração com IA</span></div>
+      <div class="status-row status-row-highlight"><span>disponibilidade</span><span class="ok">aberto a oportunidades</span></div>
     </div>
+  </div>
 </section>
 
-<!-- MARQUEE -->
-<div class="marquee-wrap">
-    <div class="marquee">
-        <span>Java</span><span class="dot">·</span>
-        <span>Spring Boot</span><span class="dot">·</span>
-        <span>Python</span><span class="dot">·</span>
-        <span>Node.js</span><span class="dot">·</span>
-        <span>React</span><span class="dot">·</span>
-        <span>TypeScript</span><span class="dot">·</span>
-        <span>PostgreSQL</span><span class="dot">·</span>
-        <span>Redis</span><span class="dot">·</span>
-        <span>Docker</span><span class="dot">·</span>
-        <span>Prisma</span><span class="dot">·</span>
-        <span>RPA</span><span class="dot">·</span>
-        <span>LLM</span><span class="dot">·</span>
-        <span>WebSocket</span><span class="dot">·</span>
-        <span>JWT</span><span class="dot">·</span>
-        <span>REST API</span><span class="dot">·</span>
-        <span>Java</span><span class="dot">·</span>
-        <span>Spring Boot</span><span class="dot">·</span>
-        <span>Python</span><span class="dot">·</span>
-        <span>Node.js</span><span class="dot">·</span>
-        <span>React</span><span class="dot">·</span>
-        <span>TypeScript</span><span class="dot">·</span>
-        <span>PostgreSQL</span><span class="dot">·</span>
-        <span>Redis</span><span class="dot">·</span>
-        <span>Docker</span><span class="dot">·</span>
-        <span>Prisma</span><span class="dot">·</span>
-        <span>RPA</span><span class="dot">·</span>
-        <span>LLM</span><span class="dot">·</span>
-        <span>WebSocket</span><span class="dot">·</span>
-    </div>
-</div>
-
 <!-- SOBRE -->
-<section id="sobre">
-    <div class="section-header">
-        <span class="num mono">01</span>
-        <h2>Sobre</h2>
+<section id="sobre" class="section">
+  <div class="section-head">
+    <h2>Sobre</h2>
+    <p class="section-sub">O que eu faço e com o que eu construo.</p>
+  </div>
+
+  <div class="sobre-grid">
+    <div class="sobre-text">
+      <p>Curso Análise e Desenvolvimento de Sistemas na Unieuro, com formatura prevista para dezembro de 2026, e estagio na Fábrica de Software da instituição como desenvolvedor backend e de banco de dados.</p>
+      <p>Fora da faculdade, entrego sistemas de verdade para clientes: hoje mantenho em produção o sistema de gestão de duas clínicas odontológicas, do levantamento de requisitos ao deploy e suporte. Também já automatizei processos fiscais corporativos com RPA em um ambiente onde o sistema legado não tinha API — só interface gráfica.</p>
+      <p>O fio condutor é sempre o mesmo: entender o processo real antes de escrever código, e preferir a solução que continua funcionando sem mim por perto.</p>
     </div>
-    <div class="sobre-grid">
-        <div class="sobre-bio">
-            <p>Desenvolvedor com <strong>20 anos</strong>, cursando Análise e Desenvolvimento de Sistemas na Unieuro (previsão 12/2026). Estagiando na <strong>Fábrica de Software da Unieuro</strong> como dev backend e banco de dados.</p>
-            <br>
-            <p>Trabalho com Java, Spring Boot, Node.js, Python, React e PostgreSQL. Experiência real com <strong>RPA em ambiente fiscal corporativo</strong>, arquiteturas distribuídas com <strong>Redis e Docker</strong>, e integração com <strong>LLMs locais e APIs de IA</strong>.</p>
-        </div>
-        <div class="skills-list">
-            <div class="skill-group">
-                <span class="skill-label mono">Backend</span>
-                <div class="skill-items">
-                    <span>Java</span><span>Spring Boot</span><span>Node.js</span><span>Python</span><span>Fastify</span><span>REST API</span><span>JWT</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <span class="skill-label mono">Frontend</span>
-                <div class="skill-items">
-                    <span>React</span><span>TypeScript</span><span>JavaScript</span><span>Tailwind</span><span>WebSocket</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <span class="skill-label mono">Dados & Infra</span>
-                <div class="skill-items">
-                    <span>PostgreSQL</span><span>Redis</span><span>SQLite</span><span>Prisma</span><span>Docker</span><span>Git</span><span>Flyway</span>
-                </div>
-            </div>
-            <div class="skill-group">
-                <span class="skill-label mono">Automação & IA</span>
-                <div class="skill-items">
-                    <span>RPA</span><span>LLM</span><span>Ollama</span><span>Claude API</span><span>Vosk</span><span>pyautogui</span><span>multiprocessing</span>
-                </div>
-            </div>
-        </div>
+
+    <div class="stack-block">
+      <div class="stack-block-header mono">
+        <span class="stack-dot red"></span><span class="stack-dot amber"></span><span class="stack-dot green"></span>
+        <span class="stack-filename">stack.yaml</span>
+      </div>
+      <pre class="stack-code mono"><code><span class="y-key">backend:</span>
+  <span class="y-item">Java, Spring Boot</span>
+  <span class="y-item">Node.js, Fastify</span>
+  <span class="y-item">Python</span>
+
+<span class="y-key">dados:</span>
+  <span class="y-item">PostgreSQL, Prisma</span>
+  <span class="y-item">Redis, SQLite</span>
+
+<span class="y-key">frontend:</span>
+  <span class="y-item">React, TypeScript</span>
+
+<span class="y-key">infra:</span>
+  <span class="y-item">Docker, Nginx, PM2</span>
+
+<span class="y-key">automação_ia:</span>
+  <span class="y-item">RPA (pyautogui, Selenium)</span>
+  <span class="y-item">Claude API, Ollama</span>
+  <span class="y-item">multiprocessing</span></code></pre>
     </div>
+  </div>
+</section>
+
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" class="section">
+  <div class="section-head">
+    <h2>Experiência</h2>
+    <p class="section-sub">Ordem cronológica, do mais recente para o mais antigo.</p>
+  </div>
+
+  <div class="log">
+    <div class="log-line">
+      <span class="log-time mono">2026 — atual</span>
+      <div class="log-body">
+        <h3>Desenvolvedor freelance — sistema de gestão clínica</h3>
+        <p>Projeto contratado por um grupo com duas clínicas odontológicas. Levantamento de requisitos direto com o cliente, arquitetura, desenvolvimento e deploy próprio — sistema em uso diário pela equipe hoje.</p>
+      </div>
+    </div>
+    <div class="log-line">
+      <span class="log-time mono">2026 — atual</span>
+      <div class="log-body">
+        <h3>Estagiário de desenvolvimento backend — Fábrica de Software Unieuro</h3>
+        <p>Desenvolvimento backend e banco de dados em projetos internos da instituição, incluindo plataforma de matching entre estagiários e empresas.</p>
+      </div>
+    </div>
+    <div class="log-line">
+      <span class="log-time mono">2025</span>
+      <div class="log-body">
+        <h3>Automação RPA — Objetiva Atacadista</h3>
+        <p>Automação de processos fiscais corporativos com Python e RPA para um sistema legado sem API disponível, controlando a interface diretamente.</p>
+      </div>
+    </div>
+    <div class="log-line">
+      <span class="log-time mono">2023 — atual</span>
+      <div class="log-body">
+        <h3>Análise e Desenvolvimento de Sistemas — Unieuro</h3>
+        <p>Formação com formatura prevista para dezembro de 2026.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- PROJETOS -->
-<section id="projetos">
-    <div class="section-header">
-        <span class="num mono">02</span>
-        <h2>Projetos</h2>
-        <div class="filtros">
-            <button class="f active" data-f="todos">todos</button>
-            <button class="f" data-f="java">java</button>
-            <button class="f" data-f="python">python</button>
-            <button class="f" data-f="automacao">automação</button>
-            <button class="f" data-f="mobile">mobile</button>
-        </div>
+<section id="projetos" class="section">
+  <div class="section-head">
+    <h2>Projetos</h2>
+    <p class="section-sub">Do que está em produção hoje até experimentos pessoais.</p>
+    <div class="filtros mono">
+      <button class="f active" data-f="todos">todos</button>
+      <button class="f" data-f="producao">em produção</button>
+      <button class="f" data-f="academico">acadêmico</button>
+      <button class="f" data-f="pessoal">pessoal</button>
     </div>
-    <div id="proj-grid"></div>
+  </div>
+
+  <div id="proj-registry" class="registry"></div>
 </section>
 
 <!-- CONTATO -->
-<section id="contato">
-    <div class="section-header">
-        <span class="num mono">03</span>
-        <h2>Contato</h2>
+<section id="contato" class="section">
+  <div class="section-head">
+    <h2>Contato</h2>
+    <p class="section-sub">Aberto a vaga CLT como desenvolvedor backend ou projetos de automação e sistemas sob demanda.</p>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-card-header mono">
+      <span class="method">POST</span><span class="endpoint">/contato</span>
     </div>
-    <p class="contato-sub">Disponível para oportunidades — bora conversar.</p>
-    <div class="contato-grid">
-        <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" class="contato-card">
-            <i class="fa-brands fa-linkedin"></i>
-            <div class="contato-info">
-                <strong>LinkedIn</strong>
-                <span>dev-lucas-vasconcelos</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
-        <a href="https://github.com/dev-lucasvsc" target="_blank" class="contato-card">
-            <i class="fa-brands fa-github"></i>
-            <div class="contato-info">
-                <strong>GitHub</strong>
-                <span>dev-lucasvsc</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
-        <a href="mailto:lucasvscxl@gmail.com" class="contato-card">
-            <i class="fa-solid fa-envelope"></i>
-            <div class="contato-info">
-                <strong>E-mail</strong>
-                <span>lucasvscxl@gmail.com</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
-        <a href="https://wa.me/5561991232571" target="_blank" class="contato-card">
-            <i class="fa-brands fa-whatsapp"></i>
-            <div class="contato-info">
-                <strong>WhatsApp</strong>
-                <span>(61) 9 9123-2571</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
-        <a href="https://www.instagram.com/dev.lucaszx" target="_blank" class="contato-card">
-            <i class="fa-brands fa-instagram"></i>
-            <div class="contato-info">
-                <strong>Instagram</strong>
-                <span>@dev.lucaszx</span>
-            </div>
-            <i class="fa-solid fa-arrow-up-right-from-square arrow-icon"></i>
-        </a>
+    <div class="contact-body">
+      <a href="mailto:lucasvscxl@gmail.com" class="contact-row">
+        <span class="contact-key mono">email</span>
+        <span class="contact-val">lucasvscxl@gmail.com</span>
+      </a>
+      <a href="https://wa.me/5561991232571" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-key mono">whatsapp</span>
+        <span class="contact-val">(61) 9 9123-2571</span>
+      </a>
+      <a href="https://www.linkedin.com/in/dev-lucas-vasconcelos" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-key mono">linkedin</span>
+        <span class="contact-val">dev-lucas-vasconcelos</span>
+      </a>
+      <a href="https://github.com/dev-lucasvsc" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-key mono">github</span>
+        <span class="contact-val">dev-lucasvsc</span>
+      </a>
+      <a href="https://www.instagram.com/dev.lucaszx" target="_blank" rel="noopener" class="contact-row">
+        <span class="contact-key mono">instagram</span>
+        <span class="contact-val">@dev.lucaszx</span>
+      </a>
     </div>
+  </div>
 </section>
 
-<footer>
-    <span class="mono">Lucas Vasconcelos · 2026</span>
+</main>
+
+<footer class="mono">
+  <span>Lucas Vasconcelos · Brasília, DF · 2026</span>
 </footer>
 
 <script src="script.js"></script>
