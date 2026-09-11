@@ -103,14 +103,14 @@ const projetos = [
   },
   {
     nome: 'Nextime',
-    status: 'pessoal',
-    statusLabel: 'pessoal · mobile',
+    status: 'academico',
+    statusLabel: 'acadêmico · mobile',
     desc: 'App mobile de agendamento com dois perfis (cliente e prestador), chat integrado e dashboard financeiro.',
     tags: ['JavaScript', 'Cordova'],
     metric: null, metricLabel: null,
     link: 'https://github.com/dev-lucasvsc/nextime-mobile',
     linkLabel: 'ver repositório',
-    filtros: ['pessoal']
+    filtros: ['academico']
   }
 ];
 
